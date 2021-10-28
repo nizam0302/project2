@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    width:100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.card{
+    width: 500px;
+    height: 300px;
+    /* background: #fff; */
+    cursor: pointer;
+    perspective: 980px;
+}
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.front,.back{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(47deg,#0045c7,#ff2c7d);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 27px;
+    border-radius: 18px;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+  
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.img-map{
+    width:100% ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+.card-num{
+    color: white;
+    margin-top: 60px;
+    font-size: 30px;
+}
+.card-holder{
+    color: white;
+    margin-top: 40px;
+    font-size: 20px;
+}
+.name{
+    color: white;
+    margin-top: 18px;
+    font-size: 16px;
+}
+.bar{
+    background: #222;
+    margin-left: -29px;
+    margin-right: -29px;
+    height: 52px;
+    margin-top: 20px;
+}
+.card-cvv{
+    margin-top: 20px;
+}
+.card-cvv div{
+    flex: 1;
+}
+.card-cvv img{
+    width: 100%;
+    display: block;
+    line-height: 0;
+}
+.card-cvv p{
+    background: white;
+    color: black;
+    padding: 10px 10px;
+}
+.card-text{
+    margin-top: 17px;
+    font-size: 18px;
+    color: white;
+}
+.signature{
+    color: white;
+    margin-top: 22px;
+    font-size: 18px;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.card:hover .card-inner{
+    transform: rotateY(-180deg);
+}
